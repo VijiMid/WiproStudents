@@ -78,6 +78,131 @@ c=a+b; // processing
 3. goto
 
 ---------------
+Git -
+Its a version control
+
+
+mkdir - make directory
+cd - Change Directory
+git init-
+1. there are 2 ways to start git
+1. git init
+(initialize a repository and it contains a hidden folder called .git.
+
+This directory has all of the objects and reference of the git.)
+
+2. git clone
+
+>ls .git- to list out the folder
+
+> git branch -m main 
+-m (to create a master branch, branch name is main(desired branch name))
+
+>echo "Wipro Employees"vijaya nagarajan" > File1.txt
+Write some content to File1.txt
+
+>ls
+to view the File1.txt
+
+>cat file1.txt
+To view the content of the File1.txt
+git 
+
+> git status
+(red color)
+> git add File1.txt 
+( green color)
+>git commit -m "Students List" 
+
+> echo "Another Text" > File1.txt
+this command will replace the existing the content
+
+ echo "Another Text" >> File1.txt
+
+This command used to append the new content with existing one.
+
+> git config --global user.email viji_mid@yahoo.com
+>git config --list
+:q
+to come out from the configuration information
+
+Next step
+goto github.com
+use credentials
+create a new Repository
+
+ git remote add origin https://github.com/VijiMid/March31Rep.git
+
+in stackroute github
+Fork the repo
+Clone to your login
+-----------------------------------
+What is program?
+set of proper instructions/statement.
+Input + process -> output
+
+what is project?
+set of prog are called a project.
+diff between proj/Sw
+whenever a project come to the market or get the license, on that time it converted as a sw.
+
+Statement
+int a; // declaration 
+int a=10; //initilization
+a=10; // assigning 
+c=a+b; // processing
+
+3 - skipping / jumping
+1. break
+2. continue
+3. goto
+
+---------------
+
+using System;
+
+// In c sharp all keywords will be in blue color.
+// What is Keywords? Its a reserved words. Its reserved for particular operations/ task
+
+
+namespace CSharpSamples1 // namespace is the keyword . It contains foldername
+{
+    class Program // class program is the default class in a project
+    {
+        // A program should contain only one main.
+        static void Main(string[] args) // This is line similar to main() of your c lang.
+        {
+            /*
+            int a=10; 
+            int b = 20;
+            int c;// decalaration Statement
+            c = a + b; // processing statement
+
+            Console.WriteLine("Answer is : " + c); 
+            // The above line similar to printf - OUtput statement
+            // Console-predefined class and WriteLine - predefined method
+            */
+            // Console.ReadLine() - similar to Scanf of your C lang
+            // default readline type is string 
+            // What is string? More than one characters/collection of charaters are called a string
+            //******************************************************
+
+            //  Convert - predefined class.
+            //ToInt32 - to convert  a string to int (type casting )
+            Console.WriteLine("Enter a : ");
+            int a = Convert.ToInt32( Console.ReadLine());
+            Console.WriteLine("Enter b : ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c;
+            c = a + b;
+            Console.WriteLine("Answer is : " + c);
+        }
+
+    }
+}
+
+// predefined and user defined classes will be in light blue clolor.
+// Program and Console are predefined classes
 
 
 
