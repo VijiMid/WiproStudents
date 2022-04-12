@@ -1,0 +1,172 @@
+Stored Procedure
+1. can execute more than one statement in single unit
+2. we can do control statement operations in stored procedure (if,switch, for, while, do.. while)
+3. By passing a single name , can do more operation
+4. because that can avoid network traffic , save time, memory mgmt)
+5. can use stored procedure in the languages of Php,python, C sharp, VB , java, javascript and so on ....
+---------------------------------------------------------------
+DELIMITER //
+create PROCEDURE wipro.getAllSalary()  // example for default procedure
+BEGIN
+select * from job;
+end//
+
+-------------
+call getAllSalary; - in c sharp
+
+Routine -
+procedure - no need to return a value.
+function - should return a value. if u want to not return a value can use void.
+procedure / function
+1. user defined
+	1. default
+	2. parameterized (call by value, call by ref/address)
+
+2. pre defined
+	1. default
+	2. parameterized (call by value, call by ref/address)
+
+----------------------------
+DELIMITER //
+create procedure wipro.getCityCount(in pcity varchar(50),out total int)
+begin
+select count(city) into total from emp  where city=pcity;
+end//
+
+
+call getCityCount('Kanpur',@total);
+select @total
+
+--------------------------------------------
+delimiter //
+create procedure Wipro.getSal(in Jid int,out status varchar(50))
+BEGIN
+declare sal int default 0; 
+select salary into sal from job where jobid=jid;
+IF sal>=100000 THEN
+set STATUS="No Incentive";
+elseif sal>=150000 and sal<100000 THEN
+set STAtus = 'Nil';
+ELSE
+set STATUS="Eligible for Incentive";
+end IF;
+end// 
+
+call getSal(10,@status):
+select @status;
+
+---------------------------
+insert into empemail values('E001','aa@gmail.com');
+insert into empemail values('E002','bb@gmail.com');
+insert into empemail values('E003','cc@gmail.com');
+insert into empemail values('E004','dd@gmail.com');
+---------------------------
+delimiter //
+create procedure Wipro.EmailList(inout emails varchar(500))
+BEGIN
+declare fin int default 0; 
+declare emailaddress varchar(100) default "";
+declare curemail cursor for select empemail from empemail;
+declare continue handler for not found set fin = 1;
+open curemail;
+getEmail:Loop
+fetch curemail into emailaddress;
+if fin=1 then
+leave getEmail;
+end if;
+set emails=concat(emailaddress,";",emails);
+end Loop getEmail;
+close curemail;
+end // 
+------------------
+set @emails="";
+call emailList(@emails);
+select @emails;
+------------------
+// can store more than one records
+//getEmail - is act as a lable. any name can give expect keywords
+---------------------
+
+In SQL diff function and procedure
+we can use function inside a query.It can't execute independently.
+But can't used procedure inside a query. It can execute independently.
+
+delimiter //
+create function WiproEligible(salary int)
+returns varchar(50)
+deterministic
+begin
+if salary<70000 then
+return ("Yes");
+else
+return ("No");
+end if;
+end;//
+ 
+SELECT Wiproeligible(90000)
+--------------------------
+delimiter //
+create function GetCity(eid varchar(50))
+returns varchar(50)
+deterministic
+begin 
+declare ccity varchar(50);
+select city into ccity from Emp where empid =eid;
+return(ccity);
+end;//
+
+select distinct getcity('E001') from emp;
+distinct can display the data only once.
+----------------------------
+delimiter //
+create procedure Wipro.getName(in ename varchar(50))
+BEGIN
+ 
+select * from emp where empname=ename;
+end// 
+
+ 
+call getName("Meesala Ravikiran");
+
+----------------------
+delimiter //
+create procedure Wipro.getNamestart(in ename varchar(50))
+BEGIN
+ 
+select * from emp where empname like 'ename%';
+end// 
+
+ 
+call getNamestart("M");
+---------------------
+
+delimiter //
+CREATE PROCEDURE [dbo].[getNamestart]
+      @SearchTerm NVARCHAR(30)
+AS
+BEGIN
+      SET NOCOUNT ON;     
+      SELECT *    FROM emp  WHERE empName LIKE '%' + @SearchTerm + '%';
+END//
+-----------------------------
+delimiter //
+create procedure Wipro.setCounter(inout counter int,in inc int)
+BEGIN
+set counter=counter+inc;
+end// 
+
+set @counter=1;
+call setCounter(@counter,5);
+call setCounter(@counter,5);
+select @counter;
+-----------------------------------
+delimiter //
+create procedure Wipro.GetTotal()
+BEGIN
+declare total int default 0;
+select count(*) into total from emp;
+select total;
+end//
+
+call GetTotal();
+-------------------------
