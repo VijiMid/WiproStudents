@@ -73,7 +73,21 @@ grant select on wipro.Emp to sai@localhost identified by 'pw';
 
 --------------------------------
 
+show create database wipro;
 
+show create table emp;
+
+show tables in wipro;
+
+show variables in wipro;
+
+SHOW PROCEDURE CODE getAll;
+
+SHOW TRIGGERS FROM Wipro;
+
+show views in wipro;
+
+SHOW FULL TABLES IN wipro WHERE TABLE_TYPE LIKE 'VIEW';
 
 
 
