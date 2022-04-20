@@ -1,0 +1,7 @@
+Logic Building	
+
+	https://gitlab-wipro.stackroute.in/stack_problem_solving_techniques_boilerplates/algorithm_exercise
+	https://gitlab-wipro.stackroute.in/stack_problem_solving_techniques_boilerplates/flowchart_exercise
+	https://gitlab-wipro.stackroute.in/stack_problem_solving_techniques_boilerplates/pseudocode_exercise
+C#	
+	https://gitlab-wipro.stackroute.in/stack_csharp_exercises/exercise-bt-check-armstrong
