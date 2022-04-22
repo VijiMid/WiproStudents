@@ -1,0 +1,52 @@
+OOPS -
+It has basic 8 concepts
+1. Class
+	  Its a user defined datatype. can create member methods (function) and member variables(normal variable)  in a class.
+
+	Two types of class 1. user defined  2. predefined 
+	In C# all class should within Namespace (Nothing but a project name. similar to folder.)
+
+2. Object
+    we can access member variable/method thru the object. 
+    The object use . Notation
+   We can create N no of objects to a class.
+   we can communication between different object.
+  New is a operator key word . It is used to create instance to a object . 
+   Instance holds the reference of a class.
+
+3. Encapsulation
+4. Abstraction
+5. Polymorphism
+6. Inheritance
+7. Dynamic binding
+8. Message passing
+
+If any langs supports the above concepts, that kind of langs are called OOPL.
+
+1. Features
+	1. Can use real world things
+	2. Resilece to Change
+	3. Reusablity
+---------------------------------------------------------------
+Access Specifier
+1. We can set visibility control to a class/method/variable by using access specifier
+2. private, public, protected, internal, protected internal
+3. Internal is the default access specifier in C sharp (private is the default access specifier in C Plus Plus)
+------------------------------------------------------------------
+Types of Class
+1. Abstract class - cannot create an instance to a abstract. by inheritance only can use.'
+2. Sealed class - opposite of abstract class. We cannot inerit a sealed class. So we have to create instance to use.
+3. static class - can use static keyword before a class, method, variable. We no need to create object to access static variable and methods. A static method can use only static variable.
+4. Nested class - 
+
+-----------------------------
+
+
+
+
+
+
+
+
+
+
