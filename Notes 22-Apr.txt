@@ -1,0 +1,45 @@
+What is Array ?
+1. If u want to store more than 1 data/element/value - use array.
+2. Array
+	1. Single
+	2. Multi (2d,3d)
+
+int a[2]; 
+int - datatype
+a- variable name
+[] - subscript
+2 - size
+Always array index starts with zero.
+-------------------------------------
+  foreach - Its also used to itreation/Looping
+
+enhanced for Loop
+It specially designed for object and arrays.
+no need to give inital value, condition check, incre/decre
+once u assign object/array into a variable, it can take starting to end one by 1.
+------------------------------------
+If you write a function within a class - Method
+
+int[] a=new int[,]{{1*2,2*2,3*2},
+	          {1*3,2*3,3*3},
+                           {1*4,2*4,3*4},
+                           {1*5,2*5,3*5}};
+Console.writeLine(a[1,1]);
+-----------------------------------------
+diff argument and parameter.
+while calling a function/method/constructor if u pass a value/variable - argument
+The argument values will store in parameter
+No of arguments and parameters should be same.
+------------------------------------
+get no of students
+Get 3 marks to each student
+print name , total mark and average for the students.
+-----------------------------------
+If u create a two dimensional array by using more than one single dimensional array - Jagged array
+----------------------------------
+String  - immutable - can't insert , delete and append
+StringBuilder  - muttable -  can insert , delete and append
+---------------------------------------
+
+
+
