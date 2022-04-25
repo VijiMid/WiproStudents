@@ -1,0 +1,46 @@
+What is constructor?
+1. If a class name and method name are same , the method is called as constructor.
+2. Constructor also a kind of method.
+3. Cons should be public
+4. Cons should not return any value.
+5. we can't call a cons.
+6. If u try to call , it will return error.
+7. Whenever we create an object to a class, the constuctor automaticalled invoked.
+8. Constructor can be overloaded.
+9. Types :
+1. default
+2. parameterized
+3. private
+4. static
+   1. should be only one static constructor
+   2. static cons should be default , not as parameterized
+  3. there is no any access specifier to static const.
+  4. C# supports static and instance constructor.
+  5. Stattic cons are convient, but they are slow
+  6. Non static const is inline as well as its fast.
+
+5. copy
+if we create a new object and want to copy the values from existing object we can use copy constructor.
+This constructor takes a single argument.
+It follows th reference to copy constructor.
+
+6. Constructor chaining
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Polymorphism - can create function/ constructor / method in  Same name with diff parameter or datatype or order of parameter, so we can use in different form
+
+1. Static
+   1. function/ constructor / method overloading 
+	rules - (Return type , access specifier  ans storage classes wont consider in overloading)
+   2. Operator Overloading
+
+2. Dynamic
+   1. Overriding
+
+
+
+
+
+
+
