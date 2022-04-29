@@ -1,0 +1,70 @@
+
+
+        public void method()
+        {
+            Console.WriteLine("Enter No : ");
+            int size = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[size];
+         
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("Enter Element : ");
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("\nBefore Sorting : ");
+            foreach (int s in arr)
+            {
+                Console.Write(" " + s);
+            }
+            sort(arr, 0, arr.Length - 1);
+            Console.WriteLine("Sorted");
+            foreach (int no in arr)
+            {
+                Console.Write(no + " ");
+            }
+        }
+
+        public static void sort(int[] arr,int L,int R)
+        {
+            if(L<R)
+            {
+                int pivot = partition(arr, L, R);
+                if(pivot>1)
+                {
+                    sort(arr, L, pivot - 1);
+                }
+                if (pivot +1<R)
+                {
+                    sort(arr,pivot+1,R);
+                }
+            }
+        }
+        public static   int partition(int[] arr, int L, int R)
+        {
+            int pivot = arr[L];
+            while (true)
+            {
+                while (arr[L] < pivot)
+                {
+                    L++;
+                }
+                while (arr[R]> pivot)
+                {
+                    R--;
+                }
+                if (L < R)
+                {
+                    if (arr[L] == arr[R])
+                        return R;
+                    int temp = arr[L];
+                    arr[L] = arr[R];
+                    arr[R] = temp;
+                }
+                else
+                {
+                    return R;
+                }
+
+            }
+        }
